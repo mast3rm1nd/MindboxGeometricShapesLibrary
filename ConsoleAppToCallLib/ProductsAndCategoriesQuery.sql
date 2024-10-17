@@ -1,24 +1,24 @@
---Запрос для таблиц:
+--Р—Р°РїСЂРѕСЃ РґР»СЏ С‚Р°Р±Р»РёС†:
 
---Таблица Products:
+--РўР°Р±Р»РёС†Р° Products:
 --ProductID	ProductName
 --1	Product A
 --2	Product B
 --3	Product C
 
---Таблица Categories:
+--РўР°Р±Р»РёС†Р° Categories:
 --CategoryID	CategoryName
 --1	Category X
 --2	Category Y
 
---Таблица ProductCategories:
+--РўР°Р±Р»РёС†Р° ProductCategories:
 --ProductID	CategoryID
 --1	1
 --1	2
 --2	1
 
 
-SELECT p.ProductName, COALESCE(c.CategoryName, 'Без категории') AS CategoryName
+SELECT p.ProductName, COALESCE(c.CategoryName, 'Р‘РµР· РєР°С‚РµРіРѕСЂРёРё') AS CategoryName
 FROM Products p
 LEFT JOIN ProductCategories pc ON p.ProductID = pc.ProductID
 LEFT JOIN Categories c ON pc.CategoryID = c.CategoryID;
